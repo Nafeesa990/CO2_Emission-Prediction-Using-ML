@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/co2.jpg');
+    background-size: cover;
+    background-position: center;
+
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+.caption {
+    font-size: 2.5em;
+    text-align: center;
+    opacity: 0; /* Start invisible for animation */
+    animation: slideIn 2s forwards; /* Animation for sliding in */
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bolder;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.get-started {
+    background-color: #dbdee1; /* Button color */
+    color: rgb(55, 52, 52);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-decoration: none; /* Remove underline from the link */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.get-started:hover {
+    background-color: #212325; /* Darker blue on hover */
+}

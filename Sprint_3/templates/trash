@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>CO2 Emission Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <div class="form-row">
+                <!-- First Column -->
+                <div class="form-column">
+                    <!-- Vehicle Make -->
+                    <div class="form-group">
+                        <label for="make">Vehicle Make</label>
+                        <select id="make" name="make" required>
+                            <option value="ACURA">ACURA</option>
+                    <option value="ALFA ROMEO">ALFA ROMEO</option>
+                    <option value="ASTON MARTIN">ASTON MARTIN</option>
+                    <option value="AUDI">AUDI</option>
+                    <option value="BENTLEY">BENTLEY</option>
+                    <option value="BMW">BMW</option>
+                    <option value="BUICK">BUICK</option>
+                    <option value="CADILLAC">CADILLAC</option>
+                    <option value="CHEVROLET">CHEVROLET</option>
+                    <option value="CHRYSLER">CHRYSLER</option>
+                    <option value="DODGE">DODGE</option>
+                    <option value="FIAT">FIAT</option>
+                    <option value="FORD">FORD</option>
+                    <option value="GMC">GMC</option>
+                    <option value="HONDA">HONDA</option>
+                    <option value="HYUNDAI">HYUNDAI</option>
+                    <option value="INFINITI">INFINITI</option>
+                    <option value="JAGUAR">JAGUAR</option>
+                    <option value="JEEP">JEEP</option>
+                    <option value="KIA">KIA</option>
+                    <option value="LAMBORGHINI">LAMBORGHINI</option>
+                    <option value="LAND ROVER">LAND ROVER</option>
+                    <option value="LEXUS">LEXUS</option>
+                    <option value="LINCOLN">LINCOLN</option>
+                    <option value="MASERATI">MASERATI</option>
+                    <option value="MAZDA">MAZDA</option>
+                    <option value="MERCEDES-BENZ">MERCEDES-BENZ</option>
+                    <option value="MINI">MINI</option>
+                    <option value="MITSUBISHI">MITSUBISHI</option>
+                    <option value="NISSAN">NISSAN</option>
+                    <option value="PORSCHE">PORSCHE</option>
+                    <option value="RAM">RAM</option>
+                    <option value="ROLLS-ROYCE">ROLLS-ROYCE</option>
+                    <option value="SCION">SCION</option>
+                    <option value="SMART">SMART</option>
+                    <option value="SRT">SRT</option>
+                    <option value="SUBARU">SUBARU</option>
+                    <option value="TOYOTA">TOYOTA</option>
+                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                    <option value="VOLVO">VOLVO</option>
+                    <option value="GENESIS">GENESIS</option>
+                    <option value="BUGATTI">BUGATTI</option>
+                            <!-- More options as needed -->
+                        </select>
+                    </div>
+
+                    <!-- Vehicle Model -->
+                    <div class="form-group">
+                        <label for="model">Vehicle Model</label>
+                        <input type="text" id="model" name="model" placeholder="Enter Vehicle Model" required>
+                    </div>
+
+                    <!-- Vehicle Type -->
+                    <div class="form-group">
+                        <label for="vehicleType">Vehicle Type</label>
+                        <select id="vehicleType" name="vehicle_type" required>
+                            <option value="COMPACT">COMPACT</option>
+                    <option value="SUV - SMALL">SUV - SMALL</option>
+                    <option value="MID-SIZE">MID-SIZE</option>
+                    <option value="TWO-SEATER">TWO-SEATER</option>
+                    <option value="MINICOMPACT">MINICOMPACT</option>
+                    <option value="SUBCOMPACT">SUBCOMPACT</option>
+                    <option value="FULL-SIZE">FULL-SIZE</option>
+                    <option value="STATION WAGON - SMALL">STATION WAGON - SMALL</option>
+                    <option value="SUV - STANDARD">SUV - STANDARD</option>
+                    <option value="VAN - CARGO">VAN - CARGO</option>
+                    <option value="VAN - PASSENGER">VAN - PASSENGER</option>
+                    <option value="PICKUP TRUCK - STANDARD">PICKUP TRUCK - STANDARD</option>
+                    <option value="MINIVAN">MINIVAN</option>
+                    <option value="SPECIAL PURPOSE VEHICLE">SPECIAL PURPOSE VEHICLE</option>
+                    <option value="STATION WAGON - MID-SIZE">STATION WAGON - MID-SIZE</option>
+                    <option value="PICKUP TRUCK - SMALL">PICKUP TRUCK - SMALL</option>
+                            <!-- More options as needed -->
+                        </select>
+                    </div>
+
+                    <!-- Engine Size -->
+                    <div class="form-group">
+                        <label for="engineSize">Engine Size (L)</label>
+                        <input type="number" id="engineSize" name="engine_size" step="0.1" min="0.1" placeholder="Enter engine size in liters" required>
+                    </div>
+
+                    <!-- Cylinders -->
+                    <div class="form-group">
+                        <label for="cylinders">Cylinders</label>
+                        <input type="number" id="cylinders" name="cylinders" step="0.1" min="0.1" placeholder="Enter number of cylinders" required>
+                    </div>
+                    <!-- Fuel Consumption Combination (mpg) -->
+                    <div class="form-group">
+                        <label for="fuelConsumptionmpg">Fuel Consumption Combination (mpg)</label>
+                        <input type="number" id="fuelConsumptionmpg" name="fuel_consumptionmpg" step="0.1" min="0.1" placeholder="Enter fuel consumption in mpg" required>
+                    </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="form-column">
+                    <!-- Transmission Type -->
+                    <div class="form-group">
+                        <label for="transmissionType">Transmission Type</label>
+                        <select id="transmissionType" name="transmission_type" required>
+                            <option value="A5">A5</option>
+                    <option value="A6">A6</option>
+                    <option value="A7">A7</option>
+                    <option value="A8">A8</option>
+                    <option value="AM6">AM6</option>
+                    <option value="AM7">AM7</option>
+                    <option value="AM8">AM8</option>
+                    <option value="AM9">AM9</option>
+                    <option value="AS5">AS5</option>
+                    <option value="AS6">AS6</option>
+                    <option value="AS7">AS7</option>
+                    <option value="AS8">AS8</option>
+                    <option value="AS9">AS9</option>
+                    <option value="AS10">AS10</option>
+                    <option value="AV6">AV6</option>
+                    <option value="AV7">AV7</option>
+                    <option value="AV8">AV8</option>
+                    <option value="AV10">AV10</option>
+                    <option value="M5">M5</option>
+                    <option value="M6">M6</option>
+                    <option value="M7">M7</option>
+                    <option value="A4">A4</option>
+                    <option value="AV">AV</option>
+                    <option value="A9">A9</option>
+                    <option value="A10">A10</option>
+                        </select>
+                    </div>
+
+                    <!-- Fuel Type -->
+                    <div class="form-group">
+                        <label for="fuelType">Fuel Type</label>
+                        <select id="fuelType" name="fuel_type" required>
+                            <option value="X">X</option>
+                    <option value="Z">Z</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="N">N</option>
+                        </select>
+                    </div>
+
+                    <!-- Fuel Consumption City -->
+                    <div class="form-group">
+                        <label for="fuelConsumptionCity">Fuel Consumption City (L/100km)</label>
+                        <input type="number" id="fuelConsumptionCity" name="fuel_consumption_city" step="0.1" min="0.1" placeholder="Enter fuel consumption in L/100km" required>
+                    </div>
+
+                    <!-- Fuel Consumption Highway -->
+                    <div class="form-group">
+                        <label for="fuelConsumptionHwy">Fuel Consumption Highway (L/100km)</label>
+                        <input type="number" id="fuelConsumptionHwy" name="fuel_consumption_hwy" step="0.1" min="0.1" placeholder="Enter fuel consumption in L/100km" required>
+                    </div>
+
+                    <!-- Fuel Consumption Combination (L/100km) -->
+                    <div class="form-group">
+                        <label for="fuelConsumption">Fuel Consumption Combination (L/100km)</label>
+                        <input type="number" id="fuelConsumption" name="fuel_consumption" step="0.1" min="0.1" placeholder="Enter fuel consumption in L/100km" required>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <center><button type="submit">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px 0;
+    position: fixed; /* Stays on top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f9ca24; /* Yellow color on hover */
+}
+
+.main-content {
+    padding-top: 60px; /* Spacing to account for fixed navbar */
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}

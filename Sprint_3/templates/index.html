@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    
+
+        <h1 class="caption">CO2 Emission Prediction System</h1>
+        <div class="caption" id="caption">"Drive the Future: Reduce Emissions, Enhance Efficiency!"</div>
+        <a href="{{ url_for('form') }}" class="get-started">Get Started</a>
+   
+    <script>
+        window.onload = function() {
+            const caption = document.getElementById('caption');
+            caption.style.animation = 'slideIn 2s forwards';
+        };
+    </script>
+</body>
+</html>

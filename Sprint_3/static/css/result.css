@@ -1,0 +1,44 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/co2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.result-box {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+}
+
+.result-box h1 {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #dfd0bb;
+}
